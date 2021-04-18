@@ -63,6 +63,21 @@ namespace CacheManager.CLS
             }
             return Resultados;
         }
+        public static DataTable TODOS_LOS_EMPLEADOS()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionDB Consultor = new DataManager.CLS.OperacionDB();
+            String Consulta = @"select IDEmpleado, Nombres, Apellidos, FechaNacimiento from Empleados order by Nombres;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+            return Resultados;
+        }
         public static DataTable PERMISOS_DE_UN_ROL(String pIDRol)
         {
             DataTable Resultados = new DataTable();

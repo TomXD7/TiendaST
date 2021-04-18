@@ -69,6 +69,7 @@ namespace General.GUI
                     RolesEdicion f = new RolesEdicion();
                     f.txtIDRol.Text = dtgRoles.CurrentRow.Cells["IDRol"].Value.ToString();
                     f.txtRol.Text = dtgRoles.CurrentRow.Cells["Rol"].Value.ToString();
+                    
                     f.ShowDialog();
                     Cargar();
                 }

@@ -44,6 +44,18 @@
   <ItemGroup>
     <Compile Include="CLS\Permisos.cs" />
     <Compile Include="CLS\Roles.cs" />
+    <Compile Include="GUI\EmpleadosEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EmpleadosEdicion.Designer.cs">
+      <DependentUpon>EmpleadosEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EmpleadosGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EmpleadosGestion.Designer.cs">
+      <DependentUpon>EmpleadosGestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\PermisosEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +92,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUI\EmpleadosEdicion.resx">
+      <DependentUpon>EmpleadosEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EmpleadosGestion.resx">
+      <DependentUpon>EmpleadosGestion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\PermisosEdicion.resx">
       <DependentUpon>PermisosEdicion.cs</DependentUpon>
     </EmbeddedResource>

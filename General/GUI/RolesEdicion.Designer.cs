@@ -44,17 +44,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 62);
+            this.label1.Location = new System.Drawing.Point(9, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = " ID Rol";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 119);
+            this.label2.Location = new System.Drawing.Point(28, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 16);
             this.label2.TabIndex = 1;
@@ -122,7 +123,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "RolesEdicion";
-            this.Text = "RolesEdicion";
+            this.Text = "Edicion de Roles";
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -23,3 +23,7 @@ SELECT distinct a.IDOpcion, b.Opcion
 FROM permisos a, opciones b
 where a.IDOpcion = b.IDOpcion
 and a.IDRol = 1;
+
+-- Todos los empleados
+
+select IDEmpleado, Nombres, Apellidos, FechaNacimiento from Empleados order by Nombres;
