@@ -17,7 +17,6 @@ namespace General.GUI
             CLS.Roles oEntidad = new CLS.Roles();
             oEntidad.IDRol = txtIDRol.Text;
             oEntidad.Rol = txtRol.Text;
-            
             try
             {
                 if (txtIDRol.TextLength > 0)

@@ -24,6 +24,8 @@ FROM permisos a, opciones b
 where a.IDOpcion = b.IDOpcion
 and a.IDRol = 1;
 
--- Todos los empleados
+-- Empleados
 
 select IDEmpleado, Nombres, Apellidos, FechaNacimiento from Empleados order by Nombres;
+
+update empleados set Nombres = 'Tomas Emanuel', Apellidos = 'Morataya Fuentes' where idempleado = 1;

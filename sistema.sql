@@ -30,7 +30,7 @@ CREATE TABLE `empleados` (
   `IDEmpleado` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `Nombres` varchar(100) NOT NULL,
   `Apellidos` varchar(100) NOT NULL,
-  `FechaNacimiento` date NOT NULL,
+  `FechaNacimiento` datetime NOT NULL,
   PRIMARY KEY (`IDEmpleado`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 

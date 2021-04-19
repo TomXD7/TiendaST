@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmpleadosEdicion));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,9 +37,11 @@
             this.txtIDEmpleado = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -86,6 +89,7 @@
             this.txtIDEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDEmpleado.Location = new System.Drawing.Point(153, 66);
             this.txtIDEmpleado.Name = "txtIDEmpleado";
+            this.txtIDEmpleado.ReadOnly = true;
             this.txtIDEmpleado.Size = new System.Drawing.Size(100, 23);
             this.txtIDEmpleado.TabIndex = 4;
             // 
@@ -105,14 +109,6 @@
             this.txtApellidos.Size = new System.Drawing.Size(202, 23);
             this.txtApellidos.TabIndex = 6;
             // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(153, 195);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 23);
-            this.textBox4.TabIndex = 7;
-            // 
             // btnGuardar
             // 
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
@@ -124,6 +120,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCerrar
             // 
@@ -136,6 +133,21 @@
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // dtpFechaNacimiento
+            // 
+            this.dtpFechaNacimiento.CustomFormat = "yyyy/MM/dd";
+            this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(153, 194);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaNacimiento.TabIndex = 10;
+            // 
+            // Notificador
+            // 
+            this.Notificador.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.Notificador.ContainerControl = this;
             // 
             // EmpleadosEdicion
             // 
@@ -143,9 +155,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(373, 386);
+            this.Controls.Add(this.dtpFechaNacimiento);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.txtIDEmpleado);
@@ -156,6 +168,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EmpleadosEdicion";
             this.Text = "Edicion de empleados";
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,11 +180,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtIDEmpleado;
-        private System.Windows.Forms.TextBox txtNombres;
-        private System.Windows.Forms.TextBox txtApellidos;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.ErrorProvider Notificador;
+        public System.Windows.Forms.TextBox txtIDEmpleado;
+        public System.Windows.Forms.TextBox txtNombres;
+        public System.Windows.Forms.TextBox txtApellidos;
+        public System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
     }
 }
