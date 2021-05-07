@@ -21,7 +21,6 @@ namespace TiendaST.GUI
                 return _Validado;
             }
         }
-
         private void Validar()
         {
             try
@@ -42,23 +41,18 @@ namespace TiendaST.GUI
                 _Validado = false;
             }
         }
-
-
         public Login()
         {
             InitializeComponent();
         }
-
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             Validar();
         }
-
         private void brnSalir_Click(object sender, EventArgs e)
         {
             Close();
         }
-
         private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter)
@@ -67,13 +61,16 @@ namespace TiendaST.GUI
                 txtClave.SelectAll();
             }
         }
-
         private void txtClave_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 btnEntrar.PerformClick();
             }
+        }
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

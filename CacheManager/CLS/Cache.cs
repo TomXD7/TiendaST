@@ -63,6 +63,21 @@ namespace CacheManager.CLS
             }
             return Resultados;
         }
+        public static DataTable TODAS_LAS_CATEGORIAS()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionDB Consultor = new DataManager.CLS.OperacionDB();
+            String Consulta = @"select IDCategoria, Categoria from categorias order by Categoria;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+            return Resultados;
+        }
         public static DataTable TODOS_LOS_EMPLEADOS()
         {
             DataTable Resultados = new DataTable();

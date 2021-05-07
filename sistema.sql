@@ -141,6 +141,171 @@ INSERT INTO `usuarios` (`IDUsuario`,`Usuario`,`IDRol`,`Clave`,`IDEmpleado`) VALU
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 
 
+--
+-- Definition of table `categorias`
+--
+
+drop table if exists `categorias`;
+create table `categorias`(
+  `IDCategoria` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `Categoria` varchar(50) NOT NULL,
+  PRIMARY KEY(`IDCategoria`)
+)ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `categorias`
+--
+
+/*!40000 ALTER TABLE `categorias` DISABLE KEYS */;
+insert into `categorias` (`IDCategoria`, `Categoria`) values
+(1, 'Desechables');
+/*!40000 ALTER TABLE `categorias` ENABLE KEYS */;
+
+
+--
+-- Definition of table `presentacion`
+--
+
+drop table if exists `presentacion`;
+create table `presentacion`(
+  `IDPresentacion` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `Presentacion` varchar(50) NOT NULL,
+  PRIMARY KEY (`IDPresentacion`)
+)ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for tabla `presentacion`
+--
+
+/*!40000 ALTER TABLE `presentacion` DISABLE KEYS */;
+insert into `presentacion` (`IDPresentacion`, `Presentacion`) values
+(1, '5X8');
+/*!40000 ALTER TABLE `presentacion` ENABLE KEYS */;
+
+
+--
+-- Definition of table `productos`
+--
+
+drop table if exists `productos`;
+create table `productos`(
+  `IDProducto` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `Codigo` varchar(50) NOT NULL,
+  `Nombre` varchar(50) NOT NULL,
+  `IDCategoria` int(11) unsigned NOT NULL,
+  `IDPresentacion` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`IDProducto`),
+  KEY `fk_Productos_Categorias1_idx` (`IDCategoria`),
+  KEY `fk_Productos_Presentacion1_idx` (`IDPresentacion`),
+  CONSTRAINT `fk_Productos_Categorias1` FOREIGN KEY (`IDCategoria`) REFERENCES `categorias` (`IDCategoria`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Productos_Presentacion1` FOREIGN KEY (`IDPresentacion`) REFERENCES `presentacion` (`IDPresentacion`) ON DELETE NO ACTION ON UPDATE NO ACTION
+)ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `productos`
+--
+
+/*!40000 ALTER TABLE `productos` DISABLE KEYS */;
+
+/*!40000 ALTER TABLE `productos` ENABLE KEYS */;
+
+
+--
+-- Definition of table `ingreso`
+--
+
+drop table if exists `ingreso`;
+create table `ingreso`(
+	`IDIngreso` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+    `Fecha` datetime NOT NULL,
+    `Tipo_comprobante` varchar(40) NOT NULL,
+    `Serie` varchar(4) NOT NULL,
+    `Correlativo` varchar(7) NOT NULL,
+    `Costo` double(10,2) NOT NULL,
+    PRIMARY KEY (`IDIngreso`)
+)ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ingreso`
+--
+
+/*!40000 ALTER TABLE `ingreso` DISABLE KEYS */;
+
+/*!40000 ALTER TABLE `ingreso` ENABLE KEYS */;
+
+
+--
+-- Definition of table `detalle_ingreso`
+--
+
+drop table if exists `detalle_ingreso`;
+create table `detalle_ingreso`(
+	`IDDetalle_ingreso` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+    `IDIngreso` int(11) UNSIGNED NOT NULL,
+    `IDProducto` int(10) unsigned NOT NULL,
+    `Precio_compra` double(10,2) NOT NULL,
+    `Precio_venta` double(10,2) NOT NULL,
+    `Stock_inicial` int(10) NOT NULL,
+    `Stock_actual` int(10) NOT NULL,
+    PRIMARY KEY (`IDDetalle_ingreso`),
+    KEY `fk_Detalle_Ingreso1_idx` (`IDIngreso`),
+    KEY `fk_Detalle_Producto1_idx` (`IDProducto`),
+    CONSTRAINT `fk_Detalle_Ingreso1` FOREIGN KEY (`IDIngreso`) REFERENCES `ingreso` (`IDIngreso`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+    CONSTRAINT `fk_Detalle_Producto1` FOREIGN KEY (`IDProducto`) REFERENCES `productos` (`IDProducto`) ON DELETE NO ACTION ON UPDATE NO ACTION
+)ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `detalle_ingreso`
+--
+
+/*!40000 ALTER TABLE `detalle_ingreso` DISABLE KEYS */;
+
+/*!40000 ALTER TABLE `detalle_ingreso` ENABLE KEYS */;
+
+
+--
+-- Definition of table `venta`
+--
+
+drop table if exists `venta`;
+create table `venta`(
+	`IDVenta` int(10) unsigned NOT NULL AUTO_INCREMENT,
+    `Nombre_Cliente` varchar(50) NOT NULL,
+    `Fecha` datetime NOT NULL,
+    `Documento` enum('Ticket', 'Consumidor Final', 'Credito Fiscal'),
+    `Serie` varchar(4) NOT NULL,
+    `Correlativo` varchar(7) NOT NULL,
+    `Total` double(10,2) NOT NULL,
+    PRIMARY KEY (`IDVenta`)
+)ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `venta`
+--
+
+/*!40000 ALTER TABLE `venta` DISABLE KEYS */;
+
+/*!40000 ALTER TABLE `venta` ENABLE KEYS */;
+
+
+--
+-- Definition of table `detalle_venta`
+--
+
+drop table if exists `detalle_venta`;
+create table `detalle_venta`(
+	`IDDetalle_venta` int(10) unsigned NOT NULL AUTO_INCREMENT,
+    `IDVenta` int(10) unsigned NOT NULL,
+    `IDDetalle_ingreso` int(11) unsigned NOT NULL,
+    `Cantidad` int(7) NOT NULL,
+    `Precio_venta` double(10,2) NOT NULL,
+    PRIMARY KEY (`IDDetalle_venta`),
+    KEY `fk_Detalle_Venta1_idx` (`IDVenta`),
+    KEY `fk_Detalle_Detalle1_idx` (`IDDetalle_ingreso`),
+    CONSTRAINT `fk_Detalle_Venta1` FOREIGN KEY (`IDVenta`) REFERENCES `venta` (`IDVenta`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+    CONSTRAINT `fk_Detalle_Detalle1` FOREIGN KEY (`IDDetalle_ingreso`) REFERENCES `detalle_ingreso` (`IDDetalle_ingreso`) ON DELETE NO ACTION ON UPDATE NO ACTION
+)ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
 
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

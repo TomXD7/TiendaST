@@ -79,5 +79,19 @@ namespace TiendaST.GUI
 
             }
         }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Productos.GUI.CategoriasGestion f = new Productos.GUI.CategoriasGestion();
+                f.MdiParent = this;
+                f.Show();
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

@@ -28,4 +28,6 @@ and a.IDRol = 1;
 
 select IDEmpleado, Nombres, Apellidos, FechaNacimiento from Empleados order by Nombres;
 
+select IDCategoria, Categoria from categorias order by Categoria;
+
 update empleados set Nombres = 'Tomas Emanuel', Apellidos = 'Morataya Fuentes' where idempleado = 1;

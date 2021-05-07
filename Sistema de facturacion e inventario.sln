@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheManager", "CacheManage
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General", "General\General.csproj", "{C13B8668-5C72-45ED-BE71-84CD06155690}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Productos", "Productos\Productos.csproj", "{117D71DA-D754-40FB-BE4C-EC83D27D5337}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C13B8668-5C72-45ED-BE71-84CD06155690}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C13B8668-5C72-45ED-BE71-84CD06155690}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C13B8668-5C72-45ED-BE71-84CD06155690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{117D71DA-D754-40FB-BE4C-EC83D27D5337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{117D71DA-D754-40FB-BE4C-EC83D27D5337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{117D71DA-D754-40FB-BE4C-EC83D27D5337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{117D71DA-D754-40FB-BE4C-EC83D27D5337}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
