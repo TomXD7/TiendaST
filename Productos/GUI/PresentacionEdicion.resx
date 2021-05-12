@@ -117,33 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnGuardar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        tgAAALYBlGnv8gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGASURBVEhL7ZY/
-        SwJxHId9AU7NvYMjC3Eool5CNLW2VEQ5RmC2RUUNRkcaiYi0SWpTKee/pqAh0KlIOystK8miN/DJr/G7
-        7k5P7wc51fAsP+7zPH43LYI3ax0QJbkBGDm5grvHZ9NspvJsW7CJp/0ALAyLsCMNqeWEUeCmVMZu6Aie
-        YBjhk4zyrgoQmghXIHdVxIxrq8naXkh51wUIJdKrAFEQPIm+XgZA7j8WuJYfsO47bMpDsbjyzh2IXhY0
-        4k7IlSrmIheaPcMwYGswdpDBuL87w/tpzVaNYeC3+A90xTDg8CUxL6XgzCRNQd/SRu8xDMzG05hIB7mg
-        jd5jGHBKZ1g8j3JBG73HMLCSyKP2/skFbfSejoHqax23pYop6FvuQLtf2YmuAftqAI4lEYPbx8oFRbls
-        CnYBbclBrpbAyPQyRqcWYHcHlAte3j5MwS6gLTnI1RJw+SPYCMYwKca+L6jVUbp/MgV9SxvakoNcP4E2
-        f1vYBTzQRu1oIAverPULPS9VHGb4/RMAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        pgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFUSURBVEhLtZZR
-        TsMwDIbzwBm4BOIOe0cscACaCe0CXIC97mkPPHEOzjFugESrSRWCC7CizfNvkmlNXZVNONI3pbH9u0uc
-        pI6Ienm7vTsvx+GqGhezdx9eSh9qgD7GYIOPFptQB2k0Oqt8eGSxhqEBGvgiRtPqDFTX4YKDlpnIX1gi
-        NtdrPZS+mLLjdxZ4DBxbTA81952Vn1yywzoLOIU1tNoJeP7Km/CqOJ8Ga6U1kQRxQTuOq/sH+pw/dcYT
-        sMFHs8nCI4GUolItCPypP4g2G/paPLdsAGOwwacnSQNth1pWjPJ2EJCWJUniydb7L1nbyYbRjEwuhGdt
-        TIsF0HZxh6oOoCW43f6CNiAOoM21L9tfdUhIkiSMxv0h8Uhtn8B8iswX2bxMzTcav4PtUYEf88MO2B7X
-        EdMLJ2F6Ze7h+YsL//+X/iFSwlzL2DBxxx/52UJuBz2zFNflZ1sOAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="Notificador.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>

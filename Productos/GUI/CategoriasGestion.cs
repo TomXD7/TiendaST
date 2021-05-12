@@ -105,5 +105,10 @@ namespace Productos.GUI
 
             }
         }
+
+        private void txtFiltrar_TextChanged(object sender, EventArgs e)
+        {
+            FiltrarLocalmente();
+        }
     }
 }
