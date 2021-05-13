@@ -56,7 +56,6 @@ namespace Productos.GUI
 
             }
         }
-
         private void txtFiltrar_Click(object sender, EventArgs e)
         {
             FiltrarLocalmente();
@@ -80,7 +79,6 @@ namespace Productos.GUI
 
             }
         }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try

@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLS\Categorias.cs" />
+    <Compile Include="CLS\Presentaciones.cs" />
     <Compile Include="GUI\CategoriasEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
