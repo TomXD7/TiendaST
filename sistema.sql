@@ -201,6 +201,8 @@ create table `productos`(
   CONSTRAINT `fk_Productos_Presentacion1` FOREIGN KEY (`IDPresentacion`) REFERENCES `presentacion` (`IDPresentacion`) ON DELETE NO ACTION ON UPDATE NO ACTION
 )ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
+alter table productos add column Marca varchar(100);
+
 --
 -- Dumping data for table `productos`
 --

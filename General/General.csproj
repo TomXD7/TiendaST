@@ -45,6 +45,7 @@
     <Compile Include="CLS\Empleados.cs" />
     <Compile Include="CLS\Permisos.cs" />
     <Compile Include="CLS\Roles.cs" />
+    <Compile Include="CLS\Usuarios.cs" />
     <Compile Include="GUI\EmpleadosEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +75,12 @@
     </Compile>
     <Compile Include="GUI\RolesGestion.Designer.cs">
       <DependentUpon>RolesGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UsuarioEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UsuarioEdicion.Designer.cs">
+      <DependentUpon>UsuarioEdicion.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\UsuarioGestion.cs">
       <SubType>Form</SubType>
@@ -113,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\RolesGestion.resx">
       <DependentUpon>RolesGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UsuarioEdicion.resx">
+      <DependentUpon>UsuarioEdicion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UsuarioGestion.resx">
       <DependentUpon>UsuarioGestion.cs</DependentUpon>

@@ -107,5 +107,19 @@ namespace TiendaST.GUI
 
             }
         }
+
+        private void gestionDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                General.GUI.UsuarioGestion f = new General.GUI.UsuarioGestion();
+                f.MdiParent = this;
+                f.Show();
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

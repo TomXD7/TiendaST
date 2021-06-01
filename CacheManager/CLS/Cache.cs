@@ -108,6 +108,23 @@ namespace CacheManager.CLS
             }
             return Resultados;
         }
+        public static DataTable TODOS_LOS_USUARIOS()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionDB Consultor = new DataManager.CLS.OperacionDB();
+            String Consulta = @"select us.IDUsuario, us.Usuario, us.Clave, r.IDRol, r.Rol, e.IDEmpleado, concat(e.Nombres, ' ', e.Apellidos) as Empleado  from usuarios us
+                                inner join roles r on r.IDRol = us.IDRol
+                                inner join empleados e on e.IDEmpleado = us.IDEmpleado;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+            return Resultados;
+        }
         public static DataTable PERMISOS_DE_UN_ROL(String pIDRol)
         {
             DataTable Resultados = new DataTable();

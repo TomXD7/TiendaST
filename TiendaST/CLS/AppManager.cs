@@ -35,6 +35,7 @@ namespace TiendaST.CLS
                 {
                     Principal f = new Principal();
                     f.ShowDialog();
+                    
                 }
             }
         }

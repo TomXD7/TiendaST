@@ -13,7 +13,6 @@ namespace General.GUI
     public partial class EmpleadosGestion : Form
     {
         BindingSource _DATOS = new BindingSource();
-
         private void Cargar()
         {
             _DATOS.DataSource = CacheManager.CLS.Cache.TODOS_LOS_EMPLEADOS();
