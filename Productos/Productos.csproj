@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="CLS\Categorias.cs" />
     <Compile Include="CLS\Presentaciones.cs" />
+    <Compile Include="CLS\Productos.cs" />
     <Compile Include="GUI\CategoriasEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +68,12 @@
     </Compile>
     <Compile Include="GUI\PresentacionGestion.Designer.cs">
       <DependentUpon>PresentacionGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ProductosGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ProductosGestion.Designer.cs">
+      <DependentUpon>ProductosGestion.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -98,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PresentacionGestion.resx">
       <DependentUpon>PresentacionGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProductosGestion.resx">
+      <DependentUpon>ProductosGestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

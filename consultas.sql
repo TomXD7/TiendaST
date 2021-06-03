@@ -33,7 +33,7 @@ select IDCategoria, Categoria from categorias order by Categoria;
 update empleados set Nombres = 'Tomas Emanuel', Apellidos = 'Morataya Fuentes' where idempleado = 1;
 
 
-select p.IDProducto, p.Codigo, p.Nombre, p.Marca, ca.IDCategoria, ca.Categoria, pre.IDPresentacion, pre.Presentacion
+select p.IDProducto, p.Codigo, p.Descripcion, p.Marca, ca.IDCategoria, ca.Categoria, pre.IDPresentacion, pre.Presentacion
 from productos p
 inner join categorias ca on ca.IDCategoria = p.IDCategoria
 inner join presentacion pre on pre.IDPresentacion = p.IDPresentacion;
@@ -46,3 +46,43 @@ inner join empleados e on e.IDEmpleado = us.IDEmpleado;
 select sha1(md5(Clave)) from usuarios;
 
 insert into usuarios(Usuario, IDRol, Clave, IDEmpleado) values ('SFORTUNE', 1, sha1(md5('12345')), 2);
+
+alter table productos add column Descripcion varchar(200) not null;
+
+alter table productos drop column PrecioUnitario;
+
+select * from productos;
+
+delete from productos where IDProducto = 3;
+
+insert into productos(Codigo, Descripcion, IDCategoria, IDPresentacion)
+values ('12345678', 
+concat('MIL ', (select Presentacion from presentacion where IDPresentacion = 2), ' ', 
+(select Categoria from categorias where IDCategoria = 5)), 5, 2);
+
+update productos set Codigo = '87654321', 
+Descripcion = concat('MIL ', (select Presentacion from presentacion where IDPresentacion = 1),
+' ', (select Categoria from categorias where IDCategoria = 5)), Marca = 'PLASTIX', IDCategoria = 5, IDPresentacion = 1
+where IDProducto = 4;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

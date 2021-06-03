@@ -8,36 +8,36 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace General.GUI
+namespace Productos.GUI
 {
-    public partial class UsuarioGestion : Form
+    public partial class ProductosGestion : Form
     {
         BindingSource _DATOS = new BindingSource();
         private void Cargar()
         {
-            _DATOS.DataSource = CacheManager.CLS.Cache.TODOS_LOS_USUARIOS();
+            _DATOS.DataSource = CacheManager.CLS.Cache.TODOS_LOS_PRODUCTOS();
             FiltrarLocalmente();
         }
         private void FiltrarLocalmente()
         {
             if (txtFiltrar.TextLength > 0)
             {
-                _DATOS.Filter = "Usuario like '%" + txtFiltrar.Text + "%'";
+                _DATOS.Filter = "Descripcion like '%" + txtFiltrar.Text + "%' or Marca like '%" + txtFiltrar.Text + "%'";
             }
             else
             {
                 _DATOS.RemoveFilter();
             }
-            dtgUsuarios.AutoGenerateColumns = false;
-            dtgUsuarios.DataSource = _DATOS;
-            lblRegistros.Text = dtgUsuarios.Rows.Count.ToString() + " Registros encontrados.";
+            dtgProductos.AutoGenerateColumns = false;
+            dtgProductos.DataSource = _DATOS;
+            lblRegistros.Text = dtgProductos.Rows.Count.ToString() + " Registros Encontrados.";
         }
-        public UsuarioGestion()
+        public ProductosGestion()
         {
             InitializeComponent();
         }
 
-        private void UsuarioGestion_Load(object sender, EventArgs e)
+        private void ProductosGestion_Load(object sender, EventArgs e)
         {
             Cargar();
         }

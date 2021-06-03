@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuarioGestion));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -126,6 +127,7 @@
             this.txtFiltrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.Size = new System.Drawing.Size(150, 32);
+            this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
             // 
             // toolStripLabel1
             // 
@@ -141,6 +143,7 @@
             this.dtgUsuarios.AllowUserToDeleteRows = false;
             this.dtgUsuarios.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dtgUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dtgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDUsuario,
@@ -150,11 +153,20 @@
             this.Rol,
             this.Clave,
             this.IDEmpleado});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgUsuarios.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtgUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgUsuarios.Location = new System.Drawing.Point(0, 32);
             this.dtgUsuarios.Name = "dtgUsuarios";
             this.dtgUsuarios.ReadOnly = true;
             this.dtgUsuarios.RowHeadersVisible = false;
+            this.dtgUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgUsuarios.Size = new System.Drawing.Size(732, 451);
             this.dtgUsuarios.TabIndex = 3;
             // 

@@ -125,6 +125,24 @@ namespace CacheManager.CLS
             }
             return Resultados;
         }
+        public static DataTable TODOS_LOS_PRODUCTOS()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionDB Consultor = new DataManager.CLS.OperacionDB();
+            String Consulta = @"select p.IDProducto, p.Codigo, p.Descripcion, p.Marca, ca.IDCategoria, ca.Categoria, pre.IDPresentacion, pre.Presentacion
+                    from productos p
+                    inner join categorias ca on ca.IDCategoria = p.IDCategoria
+                    inner join presentacion pre on pre.IDPresentacion = p.IDPresentacion;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+            return Resultados;
+        }
         public static DataTable PERMISOS_DE_UN_ROL(String pIDRol)
         {
             DataTable Resultados = new DataTable();

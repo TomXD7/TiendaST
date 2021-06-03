@@ -191,7 +191,7 @@ drop table if exists `productos`;
 create table `productos`(
   `IDProducto` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `Codigo` varchar(50) NOT NULL,
-  `Nombre` varchar(50) NOT NULL,
+  `Descripcion` varchar(200) NOT NULL,
   `IDCategoria` int(11) unsigned NOT NULL,
   `IDPresentacion` int(11) unsigned NOT NULL,
   PRIMARY KEY (`IDProducto`),

@@ -121,5 +121,19 @@ namespace TiendaST.GUI
 
             }
         }
+
+        private void productosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Productos.GUI.ProductosGestion f = new Productos.GUI.ProductosGestion();
+                f.MdiParent = this;
+                f.Show();
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

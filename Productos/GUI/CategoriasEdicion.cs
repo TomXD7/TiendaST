@@ -79,5 +79,10 @@ namespace Productos.GUI
         {
             Close();
         }
+
+        private void CategoriasEdicion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
