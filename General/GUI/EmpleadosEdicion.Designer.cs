@@ -168,6 +168,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EmpleadosEdicion";
             this.Text = "Edicion de empleados";
+            this.Load += new System.EventHandler(this.EmpleadosEdicion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

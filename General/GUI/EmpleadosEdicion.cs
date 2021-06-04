@@ -84,5 +84,10 @@ namespace General.GUI
                 Procesar();
             }
         }
+
+        private void EmpleadosEdicion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

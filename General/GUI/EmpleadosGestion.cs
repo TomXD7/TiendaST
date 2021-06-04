@@ -77,7 +77,6 @@ namespace General.GUI
 
             }
         }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try

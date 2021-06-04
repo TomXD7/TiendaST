@@ -88,6 +88,12 @@
     <Compile Include="GUI\UsuarioGestion.Designer.cs">
       <DependentUpon>UsuarioGestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\VistaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VistaEmpleado.Designer.cs">
+      <DependentUpon>VistaEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UsuarioGestion.resx">
       <DependentUpon>UsuarioGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VistaEmpleado.resx">
+      <DependentUpon>VistaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

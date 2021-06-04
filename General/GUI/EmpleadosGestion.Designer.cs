@@ -198,11 +198,11 @@
             // 
             // FechaNacimiento
             // 
+            this.FechaNacimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.FechaNacimiento.DataPropertyName = "FechaNacimiento";
             this.FechaNacimiento.HeaderText = "Fecha de Nacimiento";
             this.FechaNacimiento.Name = "FechaNacimiento";
             this.FechaNacimiento.ReadOnly = true;
-            this.FechaNacimiento.Width = 140;
             // 
             // EmpleadosGestion
             // 
