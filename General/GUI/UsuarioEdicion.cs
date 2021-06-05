@@ -12,21 +12,6 @@ namespace General.GUI
 {
     public partial class UsuarioEdicion : Form
     {
-        CLS.Empleados oEmpleados { get; set; }
-        /*private static UsuarioEdicion _Instancia;
-        public static UsuarioEdicion ObtenerInstancia()
-        {
-            if (_Instancia == null)
-            {
-                _Instancia = new UsuarioEdicion();
-            }
-            return _Instancia;
-        }
-        public void ObtenerEmpleado(String idempleado, String empleado)
-        {
-            this.txtIDEmpleado.Text = idempleado;
-            this.txtEmpleado.Text = empleado;
-        }*/
         private void Procesar()
         {
             CLS.Usuarios oEntidad = new CLS.Usuarios();
@@ -133,8 +118,8 @@ namespace General.GUI
             {
                 VistaEmpleado f = new VistaEmpleado();
                 f.ShowDialog();
-                //this.oEmpleados = f.
-                txtEmpleado.Text = oEmpleados.Nombres + " " + oEmpleados.Apellidos;
+                txtIDEmpleado.Text = f.dtgEmpleados.CurrentRow.Cells["IDEmpleado"].Value.ToString();
+                txtEmpleado.Text = f.dtgEmpleados.CurrentRow.Cells["Nombres"].Value.ToString() + " " + f.dtgEmpleados.CurrentRow.Cells["Apellidos"].Value.ToString();
             }
             catch
             {

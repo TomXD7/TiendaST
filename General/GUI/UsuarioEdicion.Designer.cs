@@ -37,15 +37,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtIDUsuario = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtEmpleado = new System.Windows.Forms.TextBox();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.cbbRoles = new System.Windows.Forms.ComboBox();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtIDEmpleado = new System.Windows.Forms.TextBox();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtIDEmpleado = new System.Windows.Forms.TextBox();
+            this.txtEmpleado = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,15 +117,6 @@
             this.txtUsuario.Size = new System.Drawing.Size(186, 23);
             this.txtUsuario.TabIndex = 6;
             // 
-            // txtEmpleado
-            // 
-            this.txtEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpleado.Location = new System.Drawing.Point(135, 125);
-            this.txtEmpleado.Name = "txtEmpleado";
-            this.txtEmpleado.ReadOnly = true;
-            this.txtEmpleado.Size = new System.Drawing.Size(187, 23);
-            this.txtEmpleado.TabIndex = 7;
-            // 
             // txtClave
             // 
             this.txtClave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -184,27 +175,36 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(45, 22);
+            this.label6.Location = new System.Drawing.Point(45, 244);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 16);
             this.label6.TabIndex = 13;
             this.label6.Text = "IDEmpleado";
             this.label6.Visible = false;
             // 
+            // Notificador
+            // 
+            this.Notificador.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.Notificador.ContainerControl = this;
+            // 
             // txtIDEmpleado
             // 
             this.txtIDEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDEmpleado.Location = new System.Drawing.Point(135, 21);
+            this.txtIDEmpleado.Location = new System.Drawing.Point(135, 243);
             this.txtIDEmpleado.Name = "txtIDEmpleado";
             this.txtIDEmpleado.ReadOnly = true;
             this.txtIDEmpleado.Size = new System.Drawing.Size(72, 23);
             this.txtIDEmpleado.TabIndex = 14;
             this.txtIDEmpleado.Visible = false;
             // 
-            // Notificador
+            // txtEmpleado
             // 
-            this.Notificador.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.Notificador.ContainerControl = this;
+            this.txtEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpleado.Location = new System.Drawing.Point(135, 125);
+            this.txtEmpleado.Name = "txtEmpleado";
+            this.txtEmpleado.ReadOnly = true;
+            this.txtEmpleado.Size = new System.Drawing.Size(187, 23);
+            this.txtEmpleado.TabIndex = 7;
             // 
             // UsuarioEdicion
             // 
@@ -250,9 +250,9 @@
         private System.Windows.Forms.ErrorProvider Notificador;
         public System.Windows.Forms.TextBox txtIDUsuario;
         public System.Windows.Forms.TextBox txtUsuario;
-        public System.Windows.Forms.TextBox txtEmpleado;
         public System.Windows.Forms.TextBox txtClave;
         public System.Windows.Forms.ComboBox cbbRoles;
         public System.Windows.Forms.TextBox txtIDEmpleado;
+        public System.Windows.Forms.TextBox txtEmpleado;
     }
 }

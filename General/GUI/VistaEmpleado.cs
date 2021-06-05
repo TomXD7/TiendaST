@@ -45,12 +45,8 @@ namespace General.GUI
         private void dtgEmpleados_DoubleClick(object sender, EventArgs e)
         {
             UsuarioEdicion f = new UsuarioEdicion();
-            //string id, empleado;
-            //id = dtgEmpleados.CurrentRow.Cells["IDEmpleado"].Value.ToString();
-            //empleado = dtgEmpleados.CurrentRow.Cells["Nombres"].Value.ToString();
-            //f.ObtenerEmpleado(id, empleado);
-            //f.txtIDEmpleado.Text = dtgEmpleados.CurrentRow.Cells["IDEmpleado"].Value.ToString();
-            //f.txtEmpleado.Text = dtgEmpleados.CurrentRow.Cells["Nombres"].Value.ToString() + ' ' + dtgEmpleados.CurrentRow.Cells["Apellidos"].Value.ToString();
+            f.txtIDEmpleado.Text = dtgEmpleados.CurrentRow.Cells["IDEmpleado"].Value.ToString();
+            f.txtEmpleado.Text = dtgEmpleados.CurrentRow.Cells["Nombres"].Value.ToString() + " " + dtgEmpleados.CurrentRow.Cells["Apellidos"].Value.ToString();
             this.Hide();
         }
 

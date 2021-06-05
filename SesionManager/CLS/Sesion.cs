@@ -76,7 +76,6 @@ namespace SesionManager.CLS
                 _IDRol = value;
             }
         }
-
         private Sesion()
         {
             _Usuario = "N/A";
